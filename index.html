@@ -1,0 +1,35 @@
+<!-- https://drive.google.com/file/d/1_Wdf-LCeWjbWyNvMRAtolc5oQXImBfWh/view?usp=sharing -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> App Velocidade </title>
+  </head>
+    <body>
+     <form>
+      <label for="distancia"> Distância percorrida em metros:</label><br>
+      <input type="number" id="distancia" name="distancia" value="0"><br>
+      <label for="tempo"> Tempo em minutos:</label><br>
+      <input type="number" id="tempo" name="tempo" value!="parseFloat(0)"><br><br>
+      
+     </form>  
+     <button onclick="calculaVm()"> Calcular Velocidade </button>
+        <p id="resultado">Resultado: </p>
+    </body>   
+
+      <script>
+        function calculaVm(){
+          let distancia = parseFloat(document.getElementById("distancia").value);
+          let tempo = parseFloat(document.getElementById("tempo").value);
+          if(tempo==0){
+            alert("Não ouve distância percorrida")
+          }
+          let Vm = distancia/tempo  
+          console.log("Sua velocidade Média foi: " + Vm + " Km/h");
+            document.getElementById("resultado").innerHTML = "Resultado: " + Vm + " Km/h"
+            
+          }
+      </script>  
+     
+</html> 
